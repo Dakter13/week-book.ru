@@ -1,0 +1,31 @@
+# Скомпилированные файлы Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Файлы виртуального окружения
+venv/
+.env
+*.env
+back/back
+tg-bot/tg-bot
+
+# Настройки IDE/редакторов
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Кэш pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# База данных
+book_data/
+pgadmin-data/
