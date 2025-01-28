@@ -222,3 +222,9 @@ async def find_user(telegram_id: str, db: db_dependency):
     if user is None:
         raise HTTPException(status_code=404, detail="Book not found")
     return user
+
+
+@app.get("/reviews", response_model=List[ReviewBase])
+def get_reviews(db: Session = Depends(get_db)):
+    reviews = db.query(models.Reviews).all()
+    return reviews

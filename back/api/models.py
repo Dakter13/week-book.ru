@@ -32,11 +32,10 @@ class Reviews(Base):
     id = Column(Integer, primary_key=True, index=True)
     book_id = Column(Integer, ForeignKey("books.id"), nullable=False)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
-    rating = Column(Integer, CheckConstraint(
-        "rating BETWEEN 1 AND 5"), nullable=False)
+    rating = Column(Integer, CheckConstraint("rating BETWEEN 1 AND 5"), nullable=False)
     review_text = Column(Text)
     public = Column(Boolean, default=False)
-    #created_at = Column(DateTime, server_default=func.now())
+    # created_at = Column(DateTime, server_default=func.now())
 
     # Relationships
     book = relationship("Books", back_populates="reviews")
