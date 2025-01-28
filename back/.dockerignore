@@ -5,6 +5,7 @@ __pycache__
 .Python
 env/
 venv/
+back/
 pip-log.txt
 pip-delete-this-directory.txt
 .tox/
@@ -21,3 +22,4 @@ coverage.xml
 .pytest_cache
 .hypothesis
 .idea
+
